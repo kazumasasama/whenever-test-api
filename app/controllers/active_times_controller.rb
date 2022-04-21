@@ -1,2 +1,0 @@
-class ActiveTimesController < ApplicationController
-end

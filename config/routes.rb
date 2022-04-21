@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # resources :available_times except: [:put]
+  get "available_times" => "available_times#index"
 end
