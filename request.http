@@ -1,1 +1,5 @@
 ###
+get http://localhost:3000/available_times.json
+
+###
+post http://localhost:3000/add_time.json

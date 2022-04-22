@@ -37,3 +37,5 @@ module WheneverTestApi
     config.api_only = true
   end
 end
+
+Time.zone = 'Eastern Time (US & Canada)'

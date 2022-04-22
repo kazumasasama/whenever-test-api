@@ -7,19 +7,20 @@ class AvailableTimesController < ApplicationController
   end
 
   def add_time
-    Time.zone = 'Eastern Time (US & Canada)'
-    t = Time.zone.now + 30.day
-    date = "#{t.year}"
-    16.times do
-      AvailableTime.create!(date: , time: day.
+    time = Time.zone.parse("10:00")
+    new_time = AvailableTime.create!(date: Date.current, time: time, available: true, event_id: 1)
+    if new_time.save
+      render json: new_time.as_json
+    else
+      render json: {errors: new_time.errors.full_messages}, status: 422
     end
   end
 end
 
-4・21 ここまで
+# 4・21 ここまで
 
-タイムゾーンと90日後の日付を取得してから30分毎のレコードを自動作成
-whenever
-railsの TimeWithZoneを使う
+# タイムゾーンと90日後の日付を取得してから30分毎のレコードを自動作成
+# whenever
+# railsの TimeWithZoneを使う
 
-10:00 - 18:00
+# 10:00 - 18:00

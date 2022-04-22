@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   # resources :available_times except: [:put]
   get "available_times" => "available_times#index"
+  post "add_time" => "available_times#add_time"
 end
