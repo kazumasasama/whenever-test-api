@@ -7,4 +7,4 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'date'
 
-AvailableTime.create!(date: Date.today.to_s, time: Time.now.strftime('%H:00'), available: true, event_id: 1)
+AvailableTime.create!(date: Date.current, time: time, available: true, event_id: 1)
