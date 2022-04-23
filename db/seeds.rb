@@ -5,6 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-require 'date'
 
-AvailableTime.create!(date: Date.current, time: time, available: true, event_id: 1)
+AvailableTime.create!(date: Date.current, time: "10:30:00", available: true, event_id: 1)
